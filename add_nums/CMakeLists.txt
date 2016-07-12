@@ -1,5 +1,8 @@
 add_library(add_nums add_nums.c)
+set_property(TARGET add_nums APPEND PROPERTY INTERFACE_INCLUDE_DIRECTORIES
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
+  $<INSTALL_INTERFACE:include>
+  )
 install(TARGETS add_nums EXPORT add_nums-targets DESTINATION lib)
 install(FILES add_nums.h DESTINATION include)
 install(EXPORT add_nums-targets DESTINATION lib/two_libs)
-set(ADD_NUMS_INCLUDE_DIRS ${CMAKE_CURRENT_SOURCE_DIR} PARENT_SCOPE)
