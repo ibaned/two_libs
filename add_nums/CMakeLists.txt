@@ -1,5 +1,5 @@
 add_library(add_nums add_nums.c)
-set_target_properties(add_nums PUBLIC_HEADER add_nums.h)
+set_target_properties(add_nums PROPERTIES PUBLIC_HEADER add_nums.h)
 install(TARGETS add_nums EXPORT add_nums-targets
         ARCHIVE DESTINATION lib
         LIBRARY DESTINATION lib

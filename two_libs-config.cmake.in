@@ -1,0 +1,7 @@
+get_filename_component(TWO_LIBS_CMAKE_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
+get_filename_component(TWO_LIBS_LIB_DIR "${TWO_LIBS_CMAKE_DIR}" PATH)
+include(${TWO_LIBS_LIB_DIR}/two_libs-targets.cmake)
+get_filename_component(two_libs_INCLUDE_DIR "${TWO_LIBS_LIB_DIR}/../include" ABSOLUTE)
+set(two_libs_INCLUDE_DIRS ${two_libs_INCLUDE_DIR} @DEP_INCLUDE_DIRS@)
+set(two_libs_COMPILER "@CMAKE_CXX_COMPILER@")
+set(two_libs_FLAGS "@FLAGS@")

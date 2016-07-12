@@ -1,6 +1,10 @@
 cmake_minimum_required(VERSION 2.8.11)
 project(two_libs)
 
+set(TWO_LIBS_MAJOR "0")
+set(TWO_LIBS_MINOR "1")
+set(TWO_LIBS_PATCH "0")
+
 # CMake RPATH "always full" configuration, see:
 # https://cmake.org/Wiki/CMake_RPATH_handling#Always_full_RPATH
 # use, i.e. don't skip the full RPATH for the build tree
