@@ -1,8 +1,5 @@
 add_library(add_nums add_nums.c)
-set_target_properties(add_nums PROPERTIES PUBLIC_HEADER add_nums.h)
-install(TARGETS add_nums EXPORT add_nums-targets
-        ARCHIVE DESTINATION lib
-        LIBRARY DESTINATION lib
-        PUBLIC_HEADER DESTINATION include)
+install(TARGETS add_nums EXPORT add_nums-targets DESTINATION lib)
+install(FILES add_nums.h DESTINATION include)
 install(EXPORT add_nums-targets DESTINATION lib/two_libs)
 set(ADD_NUMS_INCLUDE_DIRS ${CMAKE_CURRENT_SOURCE_DIR} PARENT_SCOPE)
