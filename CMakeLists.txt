@@ -21,6 +21,8 @@ endif("${isSystemDir}" STREQUAL "-1")
 # which point to directories outside the build tree to the install RPATH
 set(CMAKE_INSTALL_RPATH_USE_LINK_PATH True)
 
+add_subdirectory(incr_num)
+
 add_subdirectory(add_nums)
 
 add_subdirectory(mult_nums)
