@@ -29,6 +29,12 @@ add_subdirectory(mult_nums)
 
 add_subdirectory(better_atoi)
 
+add_library(two_libs INTERFACE)
+target_link_libraries(two_libs INTERFACE mult_nums)
+target_link_libraries(two_libs INTERFACE better_atoi)
+install(TARGETS two_libs EXPORT two_libs-targets DESTINATION lib)
+install(EXPORT two_libs-targets DESTINATION lib/two_libs)
+
 configure_file(
   "${PROJECT_SOURCE_DIR}/two_libs-config.cmake.in"
   "${PROJECT_BINARY_DIR}/two_libs-config.cmake"
