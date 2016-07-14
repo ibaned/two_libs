@@ -27,6 +27,8 @@ add_subdirectory(add_nums)
 
 add_subdirectory(mult_nums)
 
+add_subdirectory(better_atoi)
+
 configure_file(
   "${PROJECT_SOURCE_DIR}/two_libs-config.cmake.in"
   "${PROJECT_BINARY_DIR}/two_libs-config.cmake"
