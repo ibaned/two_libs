@@ -1,5 +1,5 @@
 add_library(add_nums add_nums.c)
-set_property(TARGET add_nums APPEND PROPERTY INTERFACE_INCLUDE_DIRECTORIES
+target_include_directories(add_nums INTERFACE
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
   $<INSTALL_INTERFACE:include>
   )

@@ -1,5 +1,5 @@
 add_library(mult_nums mult_nums.c)
-set_property(TARGET mult_nums APPEND PROPERTY INTERFACE_INCLUDE_DIRECTORIES
+target_include_directories(mult_nums INTERFACE
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
   $<INSTALL_INTERFACE:include>
   )
